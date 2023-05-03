@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.hero_heading {
+    margin-top: 4rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.background_body {
+    background-image: linear-gradient( to right top, #0036b1, #0058c2, #0073c6, #008ac2, #009fbc, #009ab4, #0095ad, #0090a5, #007397, #005586, #00386f, #001b53);
+    background-size: 400%;
+    animation: bg-animation 10s infinite alternate-reverse;
+    height: 100vh;
+    transition: all 1s;
+}
+
+.creative_div {
+    background-image: linear-gradient( to right top, #000000, #0e0d0e, #171717, #1e1e1f, #262627);
+    transition: all 1s;
+}
+
+.creative_div:hover>.hero_heading {
+    font-size: 6rem;
+    margin-top: -1rem;
+}
+
+.second_div {
+    height: 0;
+    opacity: 0;
+}
+
+.creative_div:hover>.second_div {
+    display: block;
+    opacity: 1;
+    height: 50rem;
+    overflow: auto;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    25% {
+        background-position: right;
+    }
+    50% {
+        background-position: left;
+    }
+    75% {
+        background-position: right;
+    }
+    100% {
+        background-color: left;
+    }
+}
