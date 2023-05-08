@@ -28,7 +28,7 @@ const Navbar = () => {
           delay: 4, duration: 2
         }}
       >
-        <div className="fixed top-[1.9rem] hover:bg-white hover:text-black hover:cursor-default transition-all duration-300 rounded-xl border-[0.5px] left-[11rem] border-white text-white p-4 text-3xl" onClick={() => setLanguage(!language)}>
+        <div className="fixed top-[1.9rem] hover:bg-white hover:text-black hover:cursor-default transition-all duration-300 rounded-xl border-[0.5px] md:left-[9rem] left-[50%] translate-x-[-50%] md:translate-x-0 border-white text-white p-4 text-xl md:text-3xl" onClick={() => setLanguage(!language)}>
           {language == true ? <>Hindi</> : <>English</>}
         </div>
       </motion.div>
@@ -42,7 +42,7 @@ const Navbar = () => {
           duration: 2,
           type: "spring",
         }}
-        className="text-white  fixed top-[2rem] left-[5rem]  border-[1px] border-white  rounded-xl cursor-default hover:bg-white hover:text-black   gap-4 text-[1.5rem] flex justify-center items-center"
+        className="text-white  fixed top-[2rem] left-[3rem]  border-[1px] border-white  rounded-xl cursor-default hover:bg-white hover:text-black   gap-4 text-[1.5rem] flex justify-center items-center"
         onClick={() => setIsShowing(!isShowing)}
       >
         <div
@@ -99,7 +99,7 @@ const Navbar = () => {
           duration: 2,
           type: "spring",
         }}
-        className="fixed top-[3rem] md:top-[2rem]  right-[4rem] text-white text-[1.5rem] md:text-[3rem] "
+        className="fixed top-[3rem] hidden md:block md:top-[2rem]  right-[3rem] text-white text-[1.5rem] md:text-[3rem] "
       >
         <h1 className="main_heading ">AGROTECH</h1>
       </motion.div>
@@ -136,16 +136,15 @@ const Navbar = () => {
                   animate={{ x: 0 }}
                   initial={{ x: -1000 }}
                   transition={{ delay: 3.5, duration: 2 }}
+                  className="text-[4rem]  text-center md:text-left md:text-[6rem]"
                   style={{
                     fontFamily: "Poppins",
-                    fontSize: "6rem",
                     fontWeight: "bolder",
                     marginTop: "7rem",
-                    paddingInline: "2rem",
                   }}
                 >
                   <span>MAKING FRAMING</span>, <br />{" "}
-                  <span>AN EASY PROCESS.</span>
+                  <span >AN EASY PROCESS.</span>
                 </motion.h1>
               </div>
             ) : (
@@ -158,7 +157,7 @@ const Navbar = () => {
                   fontSize: "6rem",
                   fontWeight: "bolder",
                   marginTop: "5rem",
-                  paddingInline: "2rem",
+
                 }}
               >
                 <span>खेती करना</span>, <br /> <span>एक आसान प्रक्रिया</span>
@@ -172,12 +171,12 @@ const Navbar = () => {
                 initial={{ x: -1000 }}
                 transition={{ delay: 3.9, duration: 2.5 }}
               >
-                <p className="text-2xl p-4 text-center md:text-left">
+                <p className="text-2xl py-4 text-center md:text-left">
                   We provide tools that a farmer needs. Our website provides an
                   all over solution <br /> for farmers, that can be used to{" "}
                 </p>
                 <motion.button 
-                  onClick={() => setRenderDiv(0)} className=" transition-all duration-500 bg-white z-[10000]   text-black font-semibold p-6 w-full  md:w-[53%] rounded-xl m-4 text-2xl">
+                  onClick={() => setRenderDiv(0)} className=" transition-all duration-500 bg-white z-[10000]   text-black font-semibold py-6 w-full  md:w-[53%] rounded-xl my-4 text-2xl">
                   Let's Get Started
                 </motion.button>
               </motion.div>
@@ -192,7 +191,7 @@ const Navbar = () => {
                   हमारी वेबसाइट किसानों <br /> के लिए एक संपूर्ण समाधान प्रदान
                   करती है, जिसका उपयोग किया जा सकता है
                 </p>
-                <button onClick={() => setRenderDiv(0)} className="hover:scale-[1.01] transition-all duration-500 bg-white z-[10000]   text-black font-semibold p-6 w-[53%] rounded-xl m-4 text-2xl">
+                <button onClick={() => setRenderDiv(0)} className="hover:scale-[1.01] transition-all duration-500 bg-white z-[10000]   text-black font-semibold py-6 w-[53%] rounded-xl my-4 text-2xl">
                   Let's Get Started
                 </button>
               </motion.div>
